@@ -10,7 +10,6 @@
       [percent]="percent"
       [maxPercent]="100"
       [radius]="radius"
-      [showTitle]="false"
       [showSubtitle]="false"
       [showUnits]="false"
       [outerStrokeWidth]="16"
@@ -21,6 +20,13 @@
       [outerStrokeGradient]="true"
       [outerStrokeGradientStopColor]="'#1ac1ff'"
       [showInnerStroke]="false"
+      [title]="'Ciclo de descanso'"
+      [title]="'#565656'"
     ></circle-progress>
+  </div>
+
+  <div class="time-text mt-3">
+    <h3>Tempo total do treino</h3>
+    <h1>{{ elapsed.h }}:{{ elapsed.m }}:{{ elapsed.s }}</h1>
   </div>
 </ion-content>
