@@ -29,4 +29,18 @@
     <h3>Tempo total do treino</h3>
     <h1>{{ elapsed.h }}:{{ elapsed.m }}:{{ elapsed.s }}</h1>
   </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ng-container *ngIf="!timer; else running">
+      <ion-fab-button (click)="startTime()">
+        <ion-icon name="play"></ion-icon>
+      </ion-fab-button>
+    </ng-container>
+    <ng-template #running>
+      <ion-fab-button (click)="stopTime()">
+        <ion-icon name="square"></ion-icon>
+      </ion-fab-button>
+    </ng-template>
+    
+  </ion-fab>
 </ion-content>
